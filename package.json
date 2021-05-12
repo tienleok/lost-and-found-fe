@@ -2,6 +2,7 @@
   "name": "lost-and-found-fe",
   "version": "0.1.0",
   "private": true,
+  "proxy" : "http://lost-and-found-be-load-balancer-703169937.ap-southeast-1.elb.amazonaws.com:8082/api-docs/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
