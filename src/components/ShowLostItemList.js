@@ -35,9 +35,9 @@ class ShowLostItemList extends Component {
       })
   };
 
-  searchSpace=(event) => {
+  searchSpace (event) {
     const searchkey = event.target.value.toString().toLowerCase()
-    var searchitems = this.state.items
+    let searchitems = this.state.items
     if (searchkey != null) {
       searchitems = searchitems.filter(function (item) {
         return (item.title && item.title.toString().toLowerCase().includes(searchkey)) ||
@@ -49,7 +49,7 @@ class ShowLostItemList extends Component {
     this.setState({ pageNumber: 0 })
   }
 
-  changePage = ({ selected }) => {
+  changePage ({ selected }) {
     this.setState({ pageNumber: selected })
   }
 

@@ -24,9 +24,9 @@ class CreateLostItem extends Component {
   onChange (e) {
     if (this.requiredFields.includes(e.target.name)) {
       if (e.target.value.length > 0) {
-        errors.[e.target.name] = ''
+        errors[e.target.name] = ''
       } else {
-        errors.[e.target.name] = 'Required input'
+        errors[e.target.name] = 'Required input'
       }
     }
     if (e.target.name === 'timestampa') {
@@ -41,11 +41,10 @@ class CreateLostItem extends Component {
   };
 
   formatDate (date) {
-    var d = new Date(date)
-    var day, month, year
-    month = '' + (d.getMonth() + 1)
-    day = '' + d.getDate()
-    year = d.getFullYear()
+    const d = new Date(date)
+    let month = '' + (d.getMonth() + 1)
+    let day = '' + d.getDate()
+    const year = d.getFullYear()
 
     if (month.length < 2) {
       month = '0' + month

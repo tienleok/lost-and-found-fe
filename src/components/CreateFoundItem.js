@@ -28,9 +28,9 @@ class CreateFoundItem extends Component {
   onChange (e) {
     if (this.requiredFields.includes(e.target.name)) {
       if (e.target.value.length > 0) {
-        errors.[e.target.name] = ''
+        errors[e.target.name] = ''
       } else {
-        errors.[e.target.name] = 'Required input'
+        errors[e.target.name] = 'Required input'
       }
     }
     if (e.target.name === 'timestampa') {
@@ -45,11 +45,10 @@ class CreateFoundItem extends Component {
   };
 
   formatDate (date) {
-    var d = new Date(date)
-    var day, month, year
-    month = '' + (d.getMonth() + 1)
-    day = '' + d.getDate()
-    year = d.getFullYear()
+    const d = new Date(date)
+    let month = '' + (d.getMonth() + 1)
+    let day = '' + d.getDate()
+    const year = d.getFullYear()
 
     if (month.length < 2) {
       month = '0' + month
@@ -66,7 +65,7 @@ class CreateFoundItem extends Component {
     return year + '-' + month + '-' + day + 'T00:00:00-00:00'
   }
 
-  handleFileRead = async (e) => {
+  async handleFileRead (e) {
     this.setState({
       image: e.target.files[0]
     })
@@ -79,7 +78,7 @@ class CreateFoundItem extends Component {
     }
   };
 
-  convertBase64 = (file) => {
+  convertBase64 (file) {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader()
       fileReader.readAsDataURL(file)
