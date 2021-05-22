@@ -1,7 +1,5 @@
 module.exports = {
   devServer: {
-    allowedHosts: [
-      '.amazonaws.com'
-    ]
+    disableHostCheck: true
   }
 }
