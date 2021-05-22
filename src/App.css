@@ -1,0 +1,305 @@
+    .App {
+        text-align: center;
+    }
+
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+        height: 40vmin;
+        pointer-events: none;
+    }
+
+    .App-header {
+        background-color: #282c34;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+    }
+
+    .App-link {
+        color: #61dafb;
+    }
+
+    @keyframes App-logo-spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .CreateItem {
+        background-color: #48d1cc;
+        min-height: 100vh;
+        color: white;
+    }
+
+    .ShowItemDetails {
+        background-color: #008080;
+        min-height: 100vh;
+        color: white;
+    }
+
+    .UpdateItemInfo {
+        background-color: #2c3e50;
+        min-height: 100vh;
+        color: white;
+    }
+
+    .ShowItemList {
+        background-color: #2F4F4F;
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        min-width: 100px;
+        color: white;
+    }
+
+    .container-fluid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+    }
+
+    /* ItemList Styles */
+
+    .list {
+        display: grid;
+        margin: 20px 0 50px 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: 2em;
+    }
+
+    .card-container {
+        width: 250px;
+        border: 1px solid rgba(0, 0, .125);
+        margin: 0 auto;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .cards {
+        background: #fff;
+        width: 18em;
+        border-radius: 0.6em;
+        margin: 1em;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+        transition: all ease 200ms;
+    }
+
+    .cards:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    }
+
+    .desc {
+        height: 130px;
+        padding: 10px;
+    }
+
+    .desc h2 {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .desc h3, p {
+        color: black;
+        font-weight: 300;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .desc h3 {
+        font-size: 1em;
+        padding: 10px 0 10px 0;
+    }
+
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+
+    @media (max-width: 800px) {
+        .container-fluid {
+            flex-direction: column;
+        }
+    }
+
+    input[type=submit] {
+        padding: 5px 15px;
+        background: #006400;
+        border: 0 none;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    body {
+        background: rgb(221, 221, 221);
+        width: 100%;
+        height: 100%;
+        color: #212529 !important;
+        font-family: "Open Sans", sans-serif !important;
+        font-size: 1rem !important;
+        font-weight: normal !important;
+        line-height: 1.5 !important;
+    }
+
+    h1 {
+        margin-top: 70px !important;
+        text-align: center;
+        font-size: 3.8rem !important;
+        margin-bottom: 7vh !important;
+    }
+
+    h2 {
+        margin-top: 50px !important;
+        font-size: 2.4rem !important;
+    }
+
+    h4 {
+        margin-top: 20px !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin-bottom: 0.5rem;
+        font-family: inherit;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #3a3a3a;
+    }
+
+    .cont-within-cont {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .logo-cont {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+        padding: 0 0 50% 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo-main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        height: 100%;
+        -webkit-animation: falling-down 5s;
+        animation: falling-down 5s;
+    }
+
+    .card-article {
+        transition: all .3s;
+        padding-bottom: 0 !important;
+        border: none !important;
+        min-height: 30vh;
+        -webkit-box-shadow: 5.665px 9.429px 40px 0px rgba(0, 0, 0, 0.17);
+        box-shadow: 5.665px 9.429px 40px 0px rgba(0, 0, 0, 0.17);
+    }
+
+    @-webkit-keyframes falling-down {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        75% {
+            opacity: 1;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes falling-down {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+        }
+        75% {
+            opacity: 1;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    .pageApp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+      }
+      
+      .pageitem {
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: #b3e3ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 500px;
+        height: 300px;
+        margin: 20px;
+      }
+      
+      .paginationBttns {
+        width: 80%;
+        height: 40px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .paginationBttns a {
+        padding: 10px;
+        margin: 8px;
+        border-radius: 5px;
+        border: 1px solid #2b2eff;
+        color: #2b2eff;
+        cursor: pointer;
+      }
+      
+      .paginationBttns a:hover {
+        color: white;
+        background-color: #2b2eff;
+      }
+      
+      .paginationActive a {
+        color: white;
+        background-color: #2b2eff;
+      }
+      
+      .paginationDisabled a {
+        color: grey;
+        background-color: grey;
+      }
